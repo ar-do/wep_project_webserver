@@ -19,34 +19,55 @@ function displayArticle(id, url) {
 
 function buildArticleFullView(response) {
     console.log(response);
-}
-// Function which creates the articles
-function buildArticleCard(id, img_src, defaultTitle, defaultText, defaultUsername) {
+    // Add Img
+    let article_img = document.getElementById("article-img-f");
+    article_img.src = response.Image;
 
+    // Add Title
+    let article_title = document.getElementById("article-title-f");
+    let article_title_h1 = document.createTextNode(response.Title);
+    article_title.appendChild(article_title_h1);
+
+    // Add Introtext
+    let article_introtxt = document.getElementById("article-introtxt-f");
+    let article_introtxt_h3 = document.createTextNode(response.Intro);
+    article_introtxt.appendChild(article_introtxt_h3);
+
+    // Add Text
+    let article_body = document.getElementById("article-body-f");
+    let article_body_p = document.createElement("p");
+    let article_body_text = document.createTextNode(response.Content);
+    article_body.appendChild(article_body_p);
+    article_body_p.appendChild(article_body_text);
     
+}
+
+/************************************************************************************************** */
 /*  This function does create the Articles on the Frontpage. The function does Inject HTML Tags
     into the DOM. Looks like that:
 
                 <div class="card-row">
                     <a href="#" class="card-a">                
                         <div class="card article-tile" >
-                            <img src="img/test.jpg" class="card-img-top" alt="...">
+                            <img src="" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the kdjsah jahksdkj jkhasdjksah jkhadkj  haskjd h kjahd k kjahda kjshd kjha kjah kjhakjha kjh akjh akhj akhj akjh ajhkakjhajkh ajhkcard title and make up the bulk of the card's content.</p>
+                                <h5 class="card-title"></h5>
+                                <p class="card-text"></p>
                             </div>
                         </div>
                     </a>   
                 </div>
 
-*/
+/************************************************************************************************** */
+function buildArticleCard(id, img_src, defaultTitle, defaultText, defaultUsername) {
+
     // Create Parent Div
         let containerPosts = document.getElementById("ContainerContent");
         let post = document.createElement("div");
 
         post.className = "card-row";
-            // Create Link
-
+           
+             // Create Link
             let post_a = document.createElement("a");
             post_a.className = "card-a";
             post_a.href = "/article?id=" + id + "&title=" + defaultTitle;

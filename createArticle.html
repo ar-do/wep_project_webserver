@@ -26,13 +26,25 @@
 
         </nav>
         <div class="container-content" id="ContainerContent">
-            <div class="input-group">
-                <input type="file" class="form-control" id="files" name="files[]" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
+            <div class="form-container">
+                <label >Bild auswählen</label>
+                <div class="input-group">
+                    <input type="file" class="form-control" id="files" name="files[]" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                    <button class="btn btn-outline-danger" type="button" id="inputGroupFileAddon04">Löschen</button>
+                </div>
+                <output id="list" class="img-preview">
+                </output>
+                    <label>Titel</label>
+                    <input type="text" class="form-title">
+                    <label>Intro</label>
+                    <input type="text" class="form-introtxt">
+                    <label>Content</label>
+                    <input type="text" class="form-content">
+                    <button type="submit" class="btn btn-info">Vorschau</button>
+                    <button type="submit" class="btn btn-success">Erstellen</button>
             </div>
-            <output id="list">
-                
-            </output>
+ 
+
             
         <!-- Content Start -->
         </div>

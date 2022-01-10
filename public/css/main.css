@@ -81,3 +81,73 @@ body {
     text-decoration: none;
 }
 
+.article-f {
+    width:50%;
+    margin:auto;
+    color: #0D1821;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    gap:5rem;
+}
+
+.article-header-f {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+
+}
+
+.article-img-f {
+    width:100%;
+    height: 40rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.article-title-f {
+    font-size: 4rem;
+}
+
+.article-introtxt-f {
+    letter-spacing: 0.15rem;
+    line-height: 3rem;
+}
+
+.article-body-f p {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    line-height: 3.5rem;
+}
+
+.article-comments-f {
+
+}
+
+.img-preview {
+
+}
+.img-preview .thumb {
+    object-fit: cover;
+    object-position: center;
+    width:100%;
+    height:40rem;
+}
+
+.form-container {
+    width:60%;
+    margin:auto;
+}
+
+.form-container label {
+    color:black;
+}
+
+.form-title,
+.form-content,
+.form-introtxt {
+    width:100%;
+    height:3rem;
+}
