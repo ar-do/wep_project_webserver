@@ -7,6 +7,7 @@ async function httpGet(url){
 }
 
 async function httpPost(url, data){
+
     try {
         const config = {
             method: 'POST',
@@ -26,6 +27,7 @@ async function httpPost(url, data){
       }
 }
 
+/*
 function dateiauswahl(evt) {
 
     var dateien = evt.target.files; // FileList object
@@ -55,6 +57,6 @@ function dateiauswahl(evt) {
       reader.readAsDataURL(f);
     }
   }
- 
+ */
 
-export { httpGet, httpPost, dateiauswahl};
+export { httpGet, httpPost};

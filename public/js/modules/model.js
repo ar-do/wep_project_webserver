@@ -1,6 +1,8 @@
 import * as Helper from './helper.js';
+import * as Config from './config.js';
 
 function createArticle(data) {
+ 
     let _article = {
             headerimg: data.headerimg,
             title: data.title,
@@ -8,9 +10,12 @@ function createArticle(data) {
             content: data.content,
             user: data.userid
     };
-    Helper.httpPost(Config.get_articles, _article).then(function(response) {
+
+    Helper.httpPost(Config.baseurl_article, _article).then(function(response) {
         return response;
+        
     });
+    
 }
 
 export { createArticle };

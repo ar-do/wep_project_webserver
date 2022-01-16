@@ -27,21 +27,33 @@
         </nav>
         <div class="container-content" id="ContainerContent">
             <div class="form-container">
-                <label >Bild auswählen</label>
-                <div class="input-group">
-                    <input type="file" class="form-control" id="files" name="files[]" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                    <button class="btn btn-outline-danger" type="button" id="inputGroupFileAddon04">Löschen</button>
-                </div>
-                <output id="list" class="img-preview">
-                </output>
-                    <label>Titel</label>
-                    <input type="text" class="form-title">
-                    <label>Intro</label>
-                    <input type="text" class="form-introtxt">
-                    <label>Content</label>
-                    <input type="text" class="form-content">
-                    <button type="submit" class="btn btn-info">Vorschau</button>
-                    <button type="submit" class="btn btn-success">Erstellen</button>
+
+            <!--
+                         action="http://localhost:3000/upload"
+                method="POST" 
+                encType="multipart/form-data"
+             -->
+                <form id="form-createArticle"
+            
+                >   
+                    <label >Bild auswählen</label>
+                    <input type="file" id="files" class="form-control" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                    <!-- <div class="input-group">
+                        <input type="file" class="form-control" id="files" name="form_img" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                        <button class="btn btn-outline-danger" type="button" id="inputGroupFileAddon04">Löschen</button>
+                    </div>
+                    <output id="list" class="img-preview">
+                    </output> -->
+                    
+                        <label>Titel</label>
+                        <input type="text" class="form-title" id="form-title">
+                        <label>Intro</label>
+                        <input type="text" class="form-introtxt" id="form-introtxt">
+                        <label>Content</label>
+                        <input type="text" class="form-content" id="form-content">
+                        <button type="submit" id="form-btn-preview" class="btn btn-info">Vorschau</button>
+                        <button type="submit" id="form-btn-submit" class="btn btn-success">Erstellen</button>
+                </form>   
             </div>
  
 
