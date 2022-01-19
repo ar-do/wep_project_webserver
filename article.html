@@ -36,10 +36,40 @@
                 <div class="article-body-f" id="article-body-f">
                    
                 </div>
-                <div class="article-comments-f" id="article-comments-f"></div>
+                <div class="article-comments-f" id="article-comments-f">
+                    <div class="article-comment-container-header">
+                        <h3 class="article-comment-header-title-f">Kommentare (<span id="comment-count"></span>)</h3>                       
+                        <button class="btn btn-success" id="btn-create-comment" data-bs-toggle="modal" data-bs-target="#exampleModal">Kommentieren <ion-icon name="create-outline"></ion-icon></button>
+                    </div>
+                    <div id="article-container-comment">
+                    </div>
+ 
+                </div>
             </div>
 
-        <!-- Content Start -->
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title color_dark" id="exampleModalLabel">Artikel kommentieren</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="comment-text" style="height: 100px"></textarea>
+                            <label class="color_dark" for="comment-text" >Schreibe einen Kommentar...</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abbrechen</button>
+                    <button type="button" class="btn btn-success" id="btn_submit_comment">Kommentar speichern</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+      
         </div>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

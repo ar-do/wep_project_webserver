@@ -125,6 +125,33 @@ body {
 }
 
 .article-comments-f {
+    border-top: 2px solid #0D1821;
+}
+.article-comment-header-title-f {
+    margin-top:2rem;
+}
+
+.article-comment-f {
+    border: 1px solid #0D1821;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.color_dark {
+    color:#0D1821;
+}
+
+.article-comment-header-f {
+    margin-bottom: 1rem;
+    border-bottom: solid 1px #0D1821;
+}
+.article-comment-container-header {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.article-comment-content {
 
 }
 

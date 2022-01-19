@@ -2,14 +2,12 @@ import * as Helper from '../helper.js';
 
 function displayArticle(id, url) {
     const newUrl = url + "/" + id;
-    console.log(newUrl);
     Helper.httpGet(newUrl).then((response) => {
         buildArticleFullView(response);
     });
 }
 
 function buildArticleFullView(response) {
-    console.log(response);
     // Add Img
     let article_img = document.getElementById("article-img-f");
     article_img.src = response.Image;

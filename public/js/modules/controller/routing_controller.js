@@ -1,6 +1,7 @@
 import * as Helper from '../helper.js';
 import * as Front_View from '../view/frontpage_view.js';
 import * as Article_View from '../view/article_view.js';
+import * as Comment_View from '../view/comment_view.js';
 import * as Config from '../config.js';
 
 
@@ -15,7 +16,7 @@ if(window.location.href.includes('/') !== false
 && window.location.href.includes('/myArticles') == false
 ){
     // Display all articles
-    Front_View.displayAllArticleCards(Config.get_articles, Config.img_src);
+    Front_View.displayAllArticleCards(Config.baseurl_article, Config.img_src);
 } 
 // localhost:3000/article    
 if (window.location.href.includes('/article') !== false)
@@ -23,7 +24,8 @@ if (window.location.href.includes('/article') !== false)
     // Article Full View
     const Params = new URLSearchParams(window.location.search);
     const _id = Params.get('id');
-    Article_View.displayArticle(_id, Config.get_articles, Config.img_src);
+    Article_View.displayArticle(_id, Config.baseurl_article);
+    Comment_View.displayComment(_id, Config.baseurl_comment);
 } 
 // localhost:3000/profile
 if(window.location.href.includes('/profile') !== false)
