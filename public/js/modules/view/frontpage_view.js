@@ -9,24 +9,6 @@ function displayAllArticleCards(url) {
     });
 }
 
-
-/************************************************************************************************** */
-/*  This function does create the Articles on the Frontpage. The function does Inject HTML Tags
-    into the DOM. Looks like that:
-
-                <div class="card-row">
-                    <a href="#" class="card-a">                
-                        <div class="card article-tile" >
-                            <img src="" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title"></h5>
-                                <p class="card-text"></p>
-                            </div>
-                        </div>
-                    </a>   
-                </div>
-
-/************************************************************************************************** */
 function buildArticleCard(id, img_src, defaultTitle, defaultText, defaultUsername) {
 
     // Create Parent Div

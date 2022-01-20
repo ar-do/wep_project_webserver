@@ -9,14 +9,14 @@ async function httpGet(url){
 async function httpPost(url, data){
 
     try {
-        const config = {
+    const config = {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
-        }
+    }
     const response = await fetch(url, config);
     if (response.ok){
         return response;
@@ -24,7 +24,12 @@ async function httpPost(url, data){
 
     } catch (error) {
 
-      }
+    }
 }
 
-export { httpGet, httpPost};
+async function httpDelete(url) {
+    const response = await fetch(url, { method: 'DELETE'});
+    return response;
+}
+
+export { httpGet, httpPost, httpDelete};

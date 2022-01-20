@@ -32,8 +32,8 @@ app.get('/myArticles', (req, res) => {
     res.sendFile(__dirname + '/templates/myArticles.html');
 });
 
-app.get('/myCommentars', (req, res) => {
-    res.sendFile(__dirname + '/templates/myCommentars.html');
+app.get('/myComments', (req, res) => {
+    res.sendFile(__dirname + '/templates/myComments.html');
 });
 
 app.post('/upload', (req, res) => {

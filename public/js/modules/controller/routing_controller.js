@@ -3,6 +3,7 @@ import * as Front_View from '../view/frontpage_view.js';
 import * as Article_View from '../view/article_view.js';
 import * as Comment_View from '../view/comment_view.js';
 import * as myArticle_View from '../view/myArticles_view.js';
+import * as myComment_View from '../view/myComments_view.js';
 import * as Config from '../config.js';
 
 
@@ -15,6 +16,7 @@ if(window.location.href.includes('/') !== false
 && window.location.href.includes('/search') == false
 && window.location.href.includes('/createArticle') == false
 && window.location.href.includes('/myArticles') == false
+&& window.location.href.includes('/myComments') == false
 ){
     // Display all articles
     Front_View.displayAllArticleCards(Config.baseurl_article, Config.img_src);
@@ -28,11 +30,7 @@ if (window.location.href.includes('/article') !== false)
     Article_View.displayArticle(_id, Config.baseurl_article);
     Comment_View.displayComment(_id, Config.baseurl_comment);
 } 
-// localhost:3000/profile
-if(window.location.href.includes('/profile') !== false)
-{
-    // tbd
-} 
+
 // localhost:3000/search
 if(window.location.href.includes('/search') !== false)
 {
@@ -49,7 +47,11 @@ if(window.location.href.includes('/myArticles') !== false)
 {
     myArticle_View.displayMyArticles(Config._username, Config.baseurl_article);
 }
-
+// localhost:3000/myComments
+if(window.location.href.includes('/myComments') !== false)
+{
+    myComment_View.displayMyComments(Config._username, Config.baseurl_comment)
+} 
 
 
 // OnClick functions used for navigation --> Maybe move into helpers since this is not really tied to routing...

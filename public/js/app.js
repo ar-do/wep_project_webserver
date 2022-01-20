@@ -5,6 +5,7 @@ import './modules/controller/routing_controller.js';
 import './modules/controller/createArticle_controller.js';
 import './modules/controller/createComment_controller.js';
 import './modules/controller/myArticles_controller.js';
+import './modules/controller/myComments_controller.js';
 
 // Loading Views
 import './modules/view/frontpage_view.js';

@@ -1,6 +1,5 @@
 // Remove later
 const _userid = 123132;
-const _testimg = "img/test.jpg"; 
 const _username = "armindoroci";
 
 
@@ -8,6 +7,7 @@ const _username = "armindoroci";
 const baseurl_article = "http://localhost:8080/api/articles";
 const baseurl_uploads = "http://localhost:3000/upload";
 const baseurl_comment = "http://localhost:8080/api/comments";
+const baseurl_user = "http://localhost:8080/api/users";
 
 // Paths
 const _imgpath = "img/";
@@ -18,6 +18,6 @@ export {
     baseurl_article,
     baseurl_uploads,
     baseurl_comment,
-    _imgpath,
-    _testimg
+    baseurl_user,
+    _imgpath
 };
