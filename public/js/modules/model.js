@@ -18,4 +18,16 @@ function createArticle(data) {
     
 }
 
-export { createArticle };
+function createComment(data) {
+    let _comment = {
+        content: data.content,
+        userid: data.userid,
+        articleid: data.articleid
+    }
+
+    Helper.httpPost(Config.baseurl_comment, _comment).then(function(response) {
+        return response;
+    })
+}
+
+export { createArticle, createComment };

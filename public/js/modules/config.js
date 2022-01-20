@@ -1,6 +1,7 @@
 // Remove later
 const _userid = 123132;
 const _testimg = "img/test.jpg"; 
+const _username = "armindoroci";
 
 
 // API Urls
@@ -13,6 +14,7 @@ const _imgpath = "img/";
 
 export { 
     _userid,
+    _username,
     baseurl_article,
     baseurl_uploads,
     baseurl_comment,

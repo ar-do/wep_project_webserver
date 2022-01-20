@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>WEP Project</title>
+</head>
+<body>
+
+        <nav id="nav-bar" class="nav-container">
+            <div class="nav-inner">
+                <div class="nav-col">
+                    <a class="logo-link" href="/">LOGO</a>
+                </div>
+                <div class="nav-col">
+                    <input type="text" class="form-control nav-search" placeholder="Search">
+                    <button type="submit" class="btn btn-outline-* nav-search-btn">Button</button>
+                </div>
+                <div class="nav-col">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <ion-icon class="nav-icon" name="person-outline"></ion-icon>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end dd-style" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="/createArticle">Artikel erstellen </a></li>
+                            <li><a class="dropdown-item" href="/myArticles">Meine Artikel</a></li>
+                            <li><a class="dropdown-item" href="/myComments">Meine Kommentare</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Abmelden</a></li>
+                        </ul>
+                      </div>
+                </div>
+            </div>
+
+        </nav>
+        <div class="container-content" id="ContainerContent">
+         <div class="container-articles" id="container-articles">
+
+         </div>
+                     <!-- Modal -->
+                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title color_dark" id="exampleModalLabel">Wollen Sie den Artikel wirklich löschen?</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-floating">
+                                    <p> Info über ARtikel...</p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abbrechen</button>
+                            <button type="button" class="btn btn-danger" id="btn_submit_comment">Artikel löschen</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModalt" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title color_dark" id="exampleModalLabel">Noch nicht verfügbar</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-floating">
+                                    <p style="color:black;">Dieses Feature ist noch nicht verfügbar. Sorry :(</p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schliessen</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    
+                    
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="js/lib/bootstrap/bootstrap.bundle.min.js"></script>
+        <script type="module" src="js/app.js"></script>
+</body>
+</html>

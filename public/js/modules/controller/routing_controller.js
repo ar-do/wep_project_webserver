@@ -2,6 +2,7 @@ import * as Helper from '../helper.js';
 import * as Front_View from '../view/frontpage_view.js';
 import * as Article_View from '../view/article_view.js';
 import * as Comment_View from '../view/comment_view.js';
+import * as myArticle_View from '../view/myArticles_view.js';
 import * as Config from '../config.js';
 
 
@@ -46,7 +47,7 @@ if(window.location.href.includes('/createArticle') !== false)
 // localhost:3000/myArticles
 if(window.location.href.includes('/myArticles') !== false)
 {
-    // tbd
+    myArticle_View.displayMyArticles(Config._username, Config.baseurl_article);
 }
 
 
