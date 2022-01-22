@@ -7,14 +7,17 @@ const port = 3000;
 
 
 // Sends all static files to client (like css, js etc.), Files are located in public directory
+
+// Only do if authenticated (cookie is there)
 app.use(express.static('public'));
 app.use(fileUpload());
 
 app.get('/', (req, res) => {
-    
-    //Check if User is Authenticated or not, if yes forward him to homepage. If not force to authenticate
     res.sendFile(__dirname + '/templates/index.html');
+});
 
+app.get('/login', (req, res) => {
+    res.sendFile(__dirname + '/templates/login.html');
 });
 app.get('/article', (req, res) => {
     res.sendFile(__dirname + '/templates/article.html');

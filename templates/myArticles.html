@@ -10,32 +10,34 @@
 </head>
 <body>
 
-        <nav id="nav-bar" class="nav-container">
-            <div class="nav-inner">
-                <div class="nav-col">
-                    <a class="logo-link" href="/">LOGO</a>
-                </div>
-                <div class="nav-col">
-                    <input type="text" class="form-control nav-search" placeholder="Search">
-                    <button type="submit" class="btn btn-outline-* nav-search-btn">Button</button>
-                </div>
-                <div class="nav-col">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <ion-icon class="nav-icon" name="person-outline"></ion-icon>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end dd-style" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="/createArticle">Artikel erstellen </a></li>
-                            <li><a class="dropdown-item" href="/myArticles">Meine Artikel</a></li>
-                            <li><a class="dropdown-item" href="/myComments">Meine Kommentare</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Abmelden</a></li>
-                        </ul>
-                      </div>
-                </div>
+    <nav id="nav-bar" class="nav-container">
+        <div class="nav-inner">
+            <div class="nav-col">
+                <a class="logo-link" href="/">LOGO</a>
             </div>
+            <div class="nav-col search-alignment">
+                <input type="text" class="form-control nav-search" placeholder="Search" id="search-query">
+                <button type="submit" class="btn btn-outline-* nav-search-btn" id="search-button">Suchen<ion-icon class="search-icon" name="search-outline"></ion-icon></button>
+            </div>
+            <div class="nav-col">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle profile-color" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <ion-icon class="nav-icon" name="person-outline"></ion-icon>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end dd-style" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" id="nav-username" href="/myArticles"></a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/createArticle">Artikel erstellen </a></li>
+                        <li><a class="dropdown-item" href="/myArticles">Meine Artikel</a></li>
+                        <li><a class="dropdown-item" href="/myComments">Meine Kommentare</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/logout">Abmelden</a></li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
 
-        </nav>
+    </nav>
         <div class="container-content" id="ContainerContent">
          <div class="container-articles" id="container-articles">
 

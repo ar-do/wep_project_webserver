@@ -1,0 +1,78 @@
+/* Login Template */
+body {
+    background-color:#0D1821;;
+    font-family: 'Roboto', sans-serif;
+    margin:0px;
+}
+input, label {
+    display:block;
+}
+.LoginContainer {
+    margin:auto;
+    margin-top:100px;
+    width:325px;
+    height:350px;
+    background-color:#0D1821;
+    -webkit-box-shadow: 0px 0px 4px 0px #9CD1FF;
+    -moz-box-shadow: 0px 0px 4px 0px #9CD1FF;
+    box-shadow: 0px 0px 4px 0px #9CD1FF;
+
+}
+.LoginTitle {
+    padding-top:10px;
+    text-align:center;
+
+    color:#F0F4EF;
+}
+.FormContainer {
+    margin:auto;
+    width:250px;
+    height:250px;
+    padding-left:20px;
+    padding-right:20px;
+}
+.lbl_login {
+    color:#F0F4EF;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+.inputfield {
+    width:250px;
+    font-size:20px;
+    height:30px;
+}
+.btn_login {
+    margin-top:20px;
+    margin-bottom:20px;
+    height:50px;
+    width:258px;
+    font-size:20px;
+}
+.a_login {
+    color:#F0F4EF;
+    text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+    background-color: white;
+    border-radius:0;
+    border:2px solid black;
+    font-family: 'Open Sans', sans-serif;
+}
+.btn:hover {
+    background-color:#f2f2f2;
+    border:2px solid 
+}
+
+/* Button Colors */
+
+.btn_green {
+    background-color:#198754;
+    border:2px solid #99B898;
+    color:white;
+}
+.btn_green:hover {
+    background-color:#A4C4A3;
+    border:2px solid #A4C4A3;
+}

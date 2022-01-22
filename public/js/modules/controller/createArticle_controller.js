@@ -1,5 +1,6 @@
 import * as Model from '../model.js';
 import * as Config from '../config.js';
+import * as Helper from '../helper.js';
 
 // Add Eventlistener for file selection
 if(window.location.href.includes('/createArticle') !== false)
@@ -64,13 +65,13 @@ function getFormData(fn) {
   const form_introtxt = document.getElementById("form-introtxt").value;
   const form_content = document.getElementById("form-content").value;
   const form_image = fn;
-  
+  const userid = Helper.getUserIDFromCookie();
   const data = {
       headerimg: Config._imgpath + form_image,
       title: form_title,
       introtxt: form_introtxt,
       content: form_content,
-      userid: Config._userid
+      userid: userid
   }
   return data;
 }

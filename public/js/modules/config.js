@@ -1,7 +1,5 @@
-// Remove later
-const _userid = 123132;
-const _username = "armindoroci";
-
+// Key for pw hash
+const key = 12345;
 
 // API Urls
 const baseurl_article = "http://localhost:8080/api/articles";
@@ -13,11 +11,10 @@ const baseurl_user = "http://localhost:8080/api/users";
 const _imgpath = "img/";
 
 export { 
-    _userid,
-    _username,
     baseurl_article,
     baseurl_uploads,
     baseurl_comment,
     baseurl_user,
+    key,
     _imgpath
 };

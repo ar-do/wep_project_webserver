@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+    <body>
+        <div class="LoginContainer">
+            <h2 class="LoginTitle">
+                Anmelden
+            </h2>
+            <div class="FormContainer">
+                <form class="LoginForm" onsubmit="return false;">
+                    <div class="row">
+                        <label class="lbl_login">Benutzername</label>
+                        <input type="text" id="ipt_UsernameLogin" class="inputfield">
+                    </div>
+                    <div class="row">
+                        <label class="lbl_login">Passwort</label>
+                        <input type="password" id="ipt_PasswordLogin" class="inputfield">
+                    </div>
+                    <button id="btn_submitCred" class="btn btn_green btn_login">Anmelden</button>
+                </form>
+                <p class="a_login" id="errorHandling"></p>
+            </div>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="js/lib/bootstrap/bootstrap.bundle.min.js"></script>
+        <script type="module" src="js/modules/controller/login_controller.js"></script>
+    </body>
+</html>

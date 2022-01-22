@@ -1,17 +1,25 @@
-// Entrypoint of website. All Modules are loaded here
-
 // Loading Controllers
-import './modules/controller/routing_controller.js';
+import './modules/controller/frontpage_controller.js';
 import './modules/controller/createArticle_controller.js';
-import './modules/controller/createComment_controller.js';
+import './modules/controller/article_controller.js';
 import './modules/controller/myArticles_controller.js';
 import './modules/controller/myComments_controller.js';
+import './modules/controller/search_controller.js';
 
-// Loading Views
-import './modules/view/frontpage_view.js';
-import './modules/view/article_view.js';
-import './modules/view/comment_view.js';
+// Loading global.js (Contains stuff that applies to all pages)
+import './modules/global.js';
 
-// Loading Model
-import './modules/model.js';
+// Loading Helper
+import * as Helper from './modules/helper.js';
+
+// Get Cookie and check if its empty
+const session = Helper.getCookie("session");
+
+if(session == "") {
+    location.href="/login";
+}
+
+
+
+
 
