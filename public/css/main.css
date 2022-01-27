@@ -76,6 +76,11 @@ body {
     color: #F0F4EF;
 }
 
+.nav-col .search-alignment {
+    flex-grow: 1;
+    max-width: 100%;
+}
+
 .dd-style {
     color: #0D1821;
     font-size: 1.5rem;
@@ -156,6 +161,7 @@ body {
     border: 1px solid #0D1821;
     padding: 2rem;
     margin-bottom: 2rem;
+    word-wrap: break-word;
 }
 
 .color_dark {
@@ -193,20 +199,27 @@ body {
 
 .form-container label {
     color:black;
+    font-size:2rem;
+    margin-bottom:1rem;
 }
-
+.form-container .form-control {
+    margin-bottom:5rem;
+}
 .form-title,
-.form-content,
 .form-introtxt {
     width:100%;
     height:3rem;
+    margin-bottom:3rem;
+}
+.form-content {
+    width:100%;
+    height:20rem;
 }
 .container-articles {
     width: 100%;
 }
 
 .container-single-article {
-    height: 10rem;
     width: 85%;
     margin: auto;
     
@@ -226,7 +239,7 @@ body {
 
 .container-single-article-content {
     border: 1px solid #0D1821;
-    height:100%;
+    height:auto;
     flex-grow: 1;
 }
 .container-single-article-controlls {
@@ -243,6 +256,8 @@ body {
 .container-single-article-content {
     color: #0D1821;
     padding: 1rem;
+    width:100%;
+    max-width: 80%;;
 }
 
 .container-single-article-content-title {
@@ -251,8 +266,73 @@ body {
 
 .container-single-article-content-introtxt {
     font-size: 1.5rem;
+    word-wrap: break-word;
 }
 
 .dropdown-menu {
     z-index: 99999;
+    
 }
+
+
+@media screen and (max-width: 1317px) {
+    .container-content {
+        padding-top: 5rem;
+        padding-left: 0.1rem;
+        padding-right:0.1rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .nav-search {
+        width: 30rem;
+    }
+    .nav-inner {
+        margin-left:5rem;
+        margin-right: 5rem;
+    }    
+}
+
+@media screen and (max-width: 645px) {
+    .nav-search {
+        width: 10rem;
+    }
+    .nav-inner {
+        margin-left:2rem;
+        margin-right: 2rem;
+    }
+    .dropdown-menu {
+        width: 100vw;
+    }
+
+    .hide-on-mediaquery {
+        display:none;
+    }
+
+    .search-icon {
+        margin:auto;
+    }
+
+    .card-row {
+        width: 100%;
+    }
+
+    .article-f {
+        width: 90%;
+    }
+
+    body {
+        overflow: scroll;
+    }
+    
+    .form-container {
+        width:90%;
+    }
+
+    .form-container .btn-success {
+        width:100%;
+        height:5rem;
+        font-size:2rem;
+    }
+}
+

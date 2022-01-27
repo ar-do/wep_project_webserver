@@ -1,5 +1,11 @@
 import * as Helper from './helper.js';
 
+const session = Helper.getCookie("session");
+
+if(session == "") {
+    location.href="/login";
+}
+
 let nav_username = document.getElementById("nav-username");
 const un = Helper.getUsernameFromCookie();
 let txtnode_nav = document.createTextNode(un);
