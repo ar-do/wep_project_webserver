@@ -38,39 +38,24 @@
         </div>
 
     </nav>
+    <div class="alert alert-dismissible fade alert_succ" id="alert" role="alert">
+        <strong id="strong_txt"></strong><span id="span_text"></span>
+        <button type="button" id="alert_close" class="btn-close" aria-label="Close"></button>
+    </div>
         <div class="container-content" id="ContainerContent">
             <div class="form-container">
-
-            <!--
-                         action="http://localhost:3000/upload"
-                method="POST" 
-                encType="multipart/form-data"
-             -->
-                <form id="form-createArticle"
-            
-                >   
-                    <label >Bild auswählen</label>
-                    <input type="file" id="files" class="form-control" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                    <!-- <div class="input-group">
-                        <input type="file" class="form-control" id="files" name="form_img" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                        <button class="btn btn-outline-danger" type="button" id="inputGroupFileAddon04">Löschen</button>
-                    </div>
-                    <output id="list" class="img-preview">
-                    </output> -->
-                    
+                <form id="form-createArticle" class="needs-validation" onsubmit="return false;" novalidate>   
+                        <label >Wähle ein Bild aus</label> 
+                        <input type="file" id="files" class="form-control" aria-describedby="inputGroupFileAddon04" aria-label="Upload" required>
                         <label>Titel</label>
-                        <input type="text" class="form-title" id="form-title">
-                        <label>Intro</label>
-                        <input type="text" class="form-introtxt" id="form-introtxt">
-                        <label>Content</label>
-                        <textarea type="text" class="form-content" id="form-content"></textarea>
+                        <input type="text" class="form-title form-control" id="form-title" required>
+                        <label>Einleitungstext</label>
+                        <input type="text" class="form-introtxt form-control" id="form-introtxt" required>
+                        <label>Text</label>
+                        <textarea type="text" class="form-content form-control" id="form-content" required></textarea>
                         <button type="submit" id="form-btn-submit" class="btn btn-success">Erstellen</button>
                 </form>   
             </div>
- 
-
-            
-        <!-- Content Start -->
         </div>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

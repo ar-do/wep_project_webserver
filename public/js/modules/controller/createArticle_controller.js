@@ -7,7 +7,6 @@ if(window.location.href.includes('/createArticle') !== false)
 {
       
   const handleImageUpload = (fileObject) => {
-    console.log(fileObject);
     
     const ts = Date.now();
     const rnd = Math.floor(Math.random() * 100000);
@@ -28,33 +27,91 @@ if(window.location.href.includes('/createArticle') !== false)
       });
       return newFileName;
   }
-    
+
+
+  (function () {
+    'use strict'
   
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    let forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+  
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
   
   // Form Submit
   
-  let form_preview_btn = document.getElementById("form-btn-preview");
+  
   let form_submit_btn = document.getElementById("form-btn-submit");
   
   form_submit_btn.addEventListener("click", () => {
-    const fileObject = document.getElementById("files").files;
-    const newFileName = handleImageUpload(fileObject)
-    console.log(document.getElementById("files").files);
-    
-    const form_data = getFormData(newFileName);
-    Model.createArticle(form_data);
-    
+    if(document.getElementById("form-title").value != ""
+    && document.getElementById("form-introtxt").value != ""
+    && document.getElementById("form-content").value != ""
+    && document.getElementById("files").value != ""){
+
+      const fileObject = document.getElementById("files").files;
+      const newFileName = handleImageUpload(fileObject);   
+      const form_data = getFormData(newFileName);  
+      Model.createArticle(form_data);
+      alertHandler("success");
+    }else {
+      let dang = document.getElementById("alert_danger");
+      alertHandler("failed");
+    }
   });
-  
-  
-  form_preview_btn.addEventListener("click", () => {
-    // Function to create the preview
-    const form_data = getFormData();
-    console.log("preview Article");
+
+  let c_alert = document.getElementById("alert_close");
+  c_alert.addEventListener("click", () => {
+    document.getElementById("alert").classList.remove("show");
   });
   
 } 
 
+function alertHandler(type){
+    let __alert = document.getElementById("alert");
+    let strong_text = document.getElementById("strong_txt");
+    let span_text = document.getElementById("span_text");
+
+      strong_text.textContent = "";
+      span_text.textContent = "";
+    if(__alert.classList.contains("alert-success")){
+      __alert.classList.remove("alert-success");
+    }
+    if(__alert.classList.contains("alert-danger")){
+      __alert.classList.remove("alert-danger");
+    }
+    
+
+    if(type == "success") {
+      let _stt = document.createTextNode("Artikel wurde erstellt");
+      let _st = document.createTextNode(" Der Artikel wurde erfolgreich erstellt");
+      strong_text.appendChild(_stt);
+      span_text.appendChild(_st);
+      __alert.classList.add("alert-success", "show");
+      
+
+    }
+    if(type == "failed") {
+      let _stt = document.createTextNode("Artikel wurde nicht erstellt");
+      let _st = document.createTextNode(" Bitte fülle alle Felder aus!");
+      strong_text.appendChild(_stt);
+      span_text.appendChild(_st);
+      __alert.classList.add("alert-danger", "show");
+
+    }
+
+}
 
 function getFormData(fn) {
   // Function for getting all the Data from the Form, returns an JSON Object with Values

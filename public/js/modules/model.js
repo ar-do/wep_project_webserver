@@ -13,7 +13,6 @@ function createArticle(data) {
 
     Helper.httpPost(Config.baseurl_article, _article).then(function(response) {
         return response;
-        
     });
     
 }
