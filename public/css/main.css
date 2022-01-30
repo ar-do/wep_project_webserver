@@ -12,6 +12,7 @@ body {
   box-sizing: border-box; 
   color:white;
   background-color:#F0F4EF ;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .nav-container {
@@ -190,6 +191,12 @@ body {
     object-position: center;
     width:100%;
     height:40rem;
+}
+.container-breadcrumb {
+    width:auto;
+    font-size:1rem;
+    margin-left:10rem;
+    margin-top:1rem;
 }
 .error {
     color:red;
